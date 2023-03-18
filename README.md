@@ -4,12 +4,12 @@
 
 1. 创建项目文件夹：
 ```sh
-mkdir your_project
-cd your_project
+mkdir learn-thrift
+cd learn-thrift
 ```
 2. 初始化Go模块：
 ```sh
-go mod init your_project
+go mod init learn-thrift
 ```
 
 这将创建一个go.mod文件，其中包含你的项目名称和依赖项。
@@ -18,7 +18,7 @@ go mod init your_project
 创建以下目录和文件结构：
 
 ```sh
-your_project/
+learn-thrift/
 ├── cmd/
 │   ├── client/
 │   │   └── main.go

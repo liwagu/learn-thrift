@@ -4,7 +4,7 @@ package service
 
 import (
 	"context"
-	"your_project/pkg/thrift/example"
+	"learn-thrift/pkg/thrift/example"
 )
 
 type UserServiceImpl struct{}

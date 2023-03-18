@@ -2,7 +2,7 @@
 package main
 
 import (
-  "your_project/pkg/thrift/example"
+  "learn-thrift/pkg/thrift/example"
   "github.com/apache/thrift/lib/go/thrift"
   "log"
   "context"

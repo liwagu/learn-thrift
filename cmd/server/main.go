@@ -3,8 +3,8 @@
 package main
 
 import (
-  "your_project/pkg/thrift/example"
-  "your_project/service"
+  "learn-thrift/pkg/thrift/example"
+  "learn-thrift/service"
   "github.com/apache/thrift/lib/go/thrift"
   "log"
   "net"
