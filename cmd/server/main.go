@@ -5,7 +5,7 @@ package main
 import (
   "your_project/pkg/thrift/example"
   "your_project/service"
-  "git.apache.org/thrift.git/lib/go/thrift"
+  "github.com/apache/thrift/lib/go/thrift"
   "log"
   "net"
 )
