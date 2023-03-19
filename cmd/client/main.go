@@ -20,19 +20,21 @@ func main() {
 }
 
 // 使用TransportFactory和ProtocolFactory包装连接
-transport, err = transportFactory.GetTransport(transport)
+// transport, err = transportFactory.GetTransport(transport)
+wrappedTransport, err := transportFactory.GetTransport(transport)
+
 if err != nil {
     log.Fatalf("Error wrapping transport: %v", err)
 }
-defer transport.Close()
+defer wrappedTransport.Close()
 
-if err := transport.Open(); err != nil {
+if err := wrappedTransport.Open(); err != nil {
     log.Fatalf("Error opening transport: %v", err)
 }
 
 // 创建Thrift客户端
-protocol := protocolFactory.GetProtocol(transport)
-client := example.NewUserServiceClientProtocol(transport, protocol, protocol)
+protocol := protocolFactory.GetProtocol(wrappedTransport)
+client := example.NewUserServiceClientProtocol(wrappedTransport, protocol, protocol)
 
 // 调用远程方法
 ctx := context.Background()
