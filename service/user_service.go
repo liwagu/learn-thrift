@@ -12,7 +12,7 @@ type UserServiceImpl struct{}
 func (u *UserServiceImpl) GetUserProfile(ctx context.Context, userId int32) (*example.UserProfile, error) {
 	// 在这里实现具体的业务逻辑
 	userProfile := &example.UserProfile{
-		Id:    userId,
+		ID:    userId,
 		Name:  "John Doe",
 		Email: "john.doe@example.com",
 	}
